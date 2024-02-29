@@ -30,7 +30,7 @@ SBSBootstrapExample >> renderContentOn: html [
 		self renderExampleOn: html ].
 
 	"Add the necessary JS scripts - use the library (SBSFileLibrary subclass) that fits best your deployment purposes"
-	SBSDeploymentLibrary addLoadScriptTo: html
+	SBSCDNDeploymentLibrary addLoadScriptTo: html
 ]
 
 { #category : #rendering }
