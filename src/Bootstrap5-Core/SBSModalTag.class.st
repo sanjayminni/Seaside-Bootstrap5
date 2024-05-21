@@ -2,23 +2,31 @@
 Bootstrap Modal
 "
 Class {
-	#name : #SBSModalTag,
-	#superclass : #SBSGenericTag,
-	#category : #'Bootstrap5-Core-Base'
+	#name : 'SBSModalTag',
+	#superclass : 'SBSGenericTag',
+	#category : 'Bootstrap5-Core-Base',
+	#package : 'Bootstrap5-Core',
+	#tag : 'Base'
 }
 
-{ #category : #defaults }
+{ #category : 'as yet unclassified' }
+SBSModalTag >> dataBackdrop: aString [
+
+	self attributeAt: 'data-bs-backdrop' put: aString
+]
+
+{ #category : 'defaults' }
 SBSModalTag >> defaultStyleClass [
 
 	^'modal'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 SBSModalTag >> fade [
 	self class: 'fade'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 SBSModalTag >> initialize [
 	super initialize.
 	self
