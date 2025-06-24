@@ -18,30 +18,36 @@ SBSCDNDeploymentLibrary class >> addLoadScriptTo: html [
 			attributeAt: 'crossorigin' put: 'anonymous'
 ]
 
+{ #category : 'as yet unclassified' }
+SBSCDNDeploymentLibrary class >> bsVersion [
+
+	^ '5.3.7'
+]
+
 { #category : 'accessing - defaults' }
 SBSCDNDeploymentLibrary class >> cdnCSSLocation [
 
-	^'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
+	^'https://cdn.jsdelivr.net/npm/bootstrap@{1}/dist/css/bootstrap.min.css' format: { self bsVersion }
 ]
 
 { #category : 'accessing - defaults' }
 SBSCDNDeploymentLibrary class >> cdnCSSLocationIntegrity [
 	"Calculated via https://www.srihash.org"
 
-	^ 'sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH'
+	^ 'sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr'
 ]
 
 { #category : 'accessing - defaults' }
 SBSCDNDeploymentLibrary class >> cdnJSLocation [
 
-	^ 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'
+	^ 'https://cdn.jsdelivr.net/npm/bootstrap@{1}/dist/js/bootstrap.bundle.min.js' format: { self bsVersion }
 ]
 
 { #category : 'accessing - defaults' }
 SBSCDNDeploymentLibrary class >> cdnJSLocationIntegrity [
 	"Calculated via https://www.srihash.org"
 
-	^ 'sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz'
+	^ 'sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q'
 ]
 
 { #category : 'updating' }
